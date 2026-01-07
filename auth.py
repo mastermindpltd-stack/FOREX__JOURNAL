@@ -1,11 +1,12 @@
 import streamlit_authenticator as stauth
 
 def get_authenticator():
+
     credentials = {
         "usernames": {
             "vicky": {
                 "name": "Vicky",
-                "password": "$2b$12$PASTE_YOUR_HASH_HERE"
+                "password": stauth.Hasher(["12345"]).generate()[0]
             }
         }
     }
